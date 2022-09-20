@@ -2,6 +2,11 @@
 Train CDS-Large on CIFAR 10
 Code based on https://github.com/kuangliu/pytorch-cifar and https://github.com/davidcpage/cifar10-fast
 '''
+
+import os
+# os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
+import argparse
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -11,8 +16,7 @@ import torchvision
 import torchvision.transforms as transforms
 from skimage import color
 
-import os
-import argparse
+
 
 from model import CDS_large
 from utils import count_params
